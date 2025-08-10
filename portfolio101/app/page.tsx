@@ -3,10 +3,11 @@ import React, { useLayoutEffect, useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 import { Github, Mail, Facebook, Instagram, ExternalLink, Code, User, Target } from 'lucide-react';
 import { gsap } from 'gsap';
 import meImage from "../assets/me.jpg";
+import Head from 'next/head';
+
 
 interface Skill {
   name: string;
@@ -156,6 +157,9 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      <Head>
+        <title>My Portfolio – Dachi J</title>
+      </Head>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="bg-pulse-1 absolute -top-40 -right-40 w-80 h-80 bg-red-500/10 rounded-full blur-3xl"></div>
